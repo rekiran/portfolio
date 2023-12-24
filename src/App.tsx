@@ -4,7 +4,7 @@ import "./App.css";
 import { Flex, MantineProvider } from "@mantine/core";
 import { Navbar } from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -12,7 +12,9 @@ function App() {
       <Flex direction="column">
         <Navbar />
         <HashRouter basename="/portfolio/">
-          <Route index path="/" element={<Hero />}></Route>
+          <Routes>
+            <Route index path="/" element={<Hero />}></Route>
+          </Routes>
         </HashRouter>
       </Flex>
     </MantineProvider>
