@@ -11,7 +11,7 @@ function App() {
     <MantineProvider>
       <Flex direction="column">
         <Navbar />
-        <HashRouter>
+        <HashRouter basename="/portfolio/">
           <Route index path="/" element={<Hero />}></Route>
         </HashRouter>
       </Flex>
