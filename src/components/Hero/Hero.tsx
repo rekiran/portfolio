@@ -7,6 +7,11 @@ import {
   Container,
   SimpleGrid,
   rem,
+  Button,
+  HoverCard,
+  Highlight,
+  Blockquote,
+  Code,
 } from "@mantine/core";
 import {
   IconGauge,
@@ -14,48 +19,47 @@ import {
   IconUser,
   IconMessage2,
   IconLock,
+  IconHandClick,
+  IconInfoCircle,
+  IconCode,
 } from "@tabler/icons-react";
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
-    title: "Extreme performance",
-    description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
+    icon: IconCode,
+    title: "Programmimg Languages",
+    description: "HTML,CSS,JavaScript,Java,Python",
   },
   {
     icon: IconUser,
     title: "Privacy focused",
-    description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
+    description: "HTML,CSS Bootstrap",
   },
   {
     icon: IconCookie,
     title: "No third parties",
-    description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
+    description: "a,b,c",
   },
   {
     icon: IconLock,
-    title: "Secure by default",
-    description:
-      "Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right",
+    title: "work",
+    description: "i,ii,iii",
   },
   {
     icon: IconMessage2,
-    title: "24/7 Support",
-    description:
-      "Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail",
+    title: "Tools",
+    description: "Github,VS Code, SQL Server",
   },
 ];
 
 interface FeatureProps {
   icon: React.FC<any>;
   title: React.ReactNode;
-  description: React.ReactNode;
+  description: String;
 }
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
+  const codeList = description.split(",");
   return (
     <div>
       <ThemeIcon variant="light" size={40} radius={40}>
@@ -65,7 +69,14 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
         {title}
       </Text>
       <Text size="sm" c="dimmed" lh={1.6}>
-        {description}
+        {codeList.map((char, index) => (
+          <span>
+            <Code color="blue.1" c="black" key={index}>
+              {char}
+            </Code>
+            <br />
+          </span>
+        ))}
       </Text>
     </div>
   );
@@ -77,7 +88,33 @@ export default function Hero() {
   return (
     <Container className={classes.wrapper}>
       <Title className={classes.title}>
-        Integrate effortlessly with any technology stack
+        Hello, I'm Kiran{" "}
+        <HoverCard width={280} shadow="md">
+          <HoverCard.Target>
+            <Button
+              color="gray"
+              size="compact-xl"
+              variant="outline"
+              leftSection={""}
+              rightSection={""}
+            >
+              <IconHandClick />
+            </Button>
+          </HoverCard.Target>
+          <HoverCard.Dropdown>
+            <Text size="sm">
+              <Blockquote
+                color="blue"
+                cite="– Kiran ."
+                icon={<IconInfoCircle />}
+                mt="xl"
+              >
+                I know LAST NAME is missing. As a matter of fact I do not have
+                one !
+              </Blockquote>
+            </Text>
+          </HoverCard.Dropdown>
+        </HoverCard>
       </Title>
 
       <Container size={560} p={0}>
