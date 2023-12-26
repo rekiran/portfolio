@@ -1,137 +1,92 @@
-import React from "react";
-import classes from "./Hero.module.css";
 import {
-  ThemeIcon,
-  Text,
-  Title,
+  Image,
   Container,
-  SimpleGrid,
-  rem,
+  Title,
   Button,
-  HoverCard,
-  Highlight,
-  Blockquote,
-  Code,
+  Group,
+  Text,
+  List,
+  ThemeIcon,
+  rem,
 } from "@mantine/core";
-import {
-  IconGauge,
-  IconCookie,
-  IconUser,
-  IconMessage2,
-  IconLock,
-  IconHandClick,
-  IconInfoCircle,
-  IconCode,
-} from "@tabler/icons-react";
-
-export const MOCKDATA = [
-  {
-    icon: IconCode,
-    title: "Programmimg Languages",
-    description: "HTML,CSS,JavaScript,Java,Python",
-  },
-  {
-    icon: IconUser,
-    title: "Privacy focused",
-    description: "HTML,CSS Bootstrap",
-  },
-  {
-    icon: IconCookie,
-    title: "No third parties",
-    description: "a,b,c",
-  },
-  {
-    icon: IconLock,
-    title: "work",
-    description: "i,ii,iii",
-  },
-  {
-    icon: IconMessage2,
-    title: "Tools",
-    description: "Github,VS Code, SQL Server",
-  },
-];
-
-interface FeatureProps {
-  icon: React.FC<any>;
-  title: React.ReactNode;
-  description: String;
-}
-
-export function Feature({ icon: Icon, title, description }: FeatureProps) {
-  const codeList = description.split(",");
+import { IconCheck, IconCode, IconDownload } from "@tabler/icons-react";
+import Herobg from "../../assets/Herobg.png";
+import classes from "./Hero.module.css";
+import { IconFileAnalytics } from "@tabler/icons-react";
+import resume from "../../assets/KiranResume-2023.pdf";
+function Hero() {
   return (
-    <div>
-      <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-      </ThemeIcon>
-      <Text mt="sm" mb={7}>
-        {title}
-      </Text>
-      <Text size="sm" c="dimmed" lh={1.6}>
-        {codeList.map((char, index) => (
-          <span>
-            <Code color="blue.1" c="black" key={index}>
-              {char}
-            </Code>
-            <br />
-          </span>
-        ))}
-      </Text>
-    </div>
-  );
-}
-export default function Hero() {
-  const features = MOCKDATA.map((feature, index) => (
-    <Feature {...feature} key={index} />
-  ));
-  return (
-    <Container className={classes.wrapper}>
-      <Title className={classes.title}>
-        Hello, I'm Kiran{" "}
-        <HoverCard width={280} shadow="md">
-          <HoverCard.Target>
-            <Button
-              color="gray"
-              size="compact-xl"
-              variant="outline"
-              leftSection={""}
-              rightSection={""}
-            >
-              <IconHandClick />
-            </Button>
-          </HoverCard.Target>
-          <HoverCard.Dropdown>
-            <Text size="sm">
-              <Blockquote
-                color="blue"
-                cite="– Kiran ."
-                icon={<IconInfoCircle />}
-                mt="xl"
+    <Container size="md">
+      <div className={classes.inner}>
+        <div className={classes.content}>
+          <Title className={classes.title}>
+            Hi, I'm <span className={classes.highlight}>Kiran</span> <br />
+          </Title>
+          <Text c="dimmed" mt="md">
+            I am a detail-focused developer with 3 yrs of professional
+            experience.
+          </Text>
+          <Text mt={30}>
+            <IconCode size={16} color="black" /> <b>My Techstack</b>
+          </Text>
+          <List
+            mt={30}
+            spacing="sm"
+            size="sm"
+            icon={
+              <ThemeIcon size={20} radius="xl">
+                <IconCheck
+                  style={{ width: rem(12), height: rem(12) }}
+                  stroke={1.5}
+                />
+              </ThemeIcon>
+            }
+          >
+            <List.Item>
+              <b>Programming languages</b> – Java, Python, JavaScript,
+              TypeScript
+            </List.Item>
+            <List.Item>
+              <b>Frontend Technologies</b> – HTML, CSS, Bootstrap, RestJS
+            </List.Item>
+            <List.Item>
+              <b>Backend Technologies</b> – SQL, MySQL, PostgreSQL
+            </List.Item>
+            <List.Item>
+              <b>Tools</b> – Microsoft Visual Studio, MS Server, Visual Studio
+              Code, Eclipse, Github, JIRA, Bitbucket, PowerBI, Confluence,
+              ServiceNow
+            </List.Item>
+          </List>
+
+          <Group mt={30}>
+            <a href={resume} target="_blank">
+              <Button
+                variant="default"
+                radius="xl"
+                size="md"
+                className={classes.control}
+                rightSection={<IconFileAnalytics size={16} />}
               >
-                I know LAST NAME is missing. As a matter of fact I do not have
-                one !
-              </Blockquote>
-            </Text>
-          </HoverCard.Dropdown>
-        </HoverCard>
-      </Title>
-
-      <Container size={560} p={0}>
-        <Text size="sm" className={classes.description}>
-          Every once in a while, you’ll see a Golbat that’s missing some fangs.
-          This happens when hunger drives it to try biting a Steel-type Pokémon.
-        </Text>
-      </Container>
-
-      <SimpleGrid
-        mt={60}
-        cols={{ base: 1, sm: 2, md: 3 }}
-        spacing={{ base: "xl", md: 50 }}
-        verticalSpacing={{ base: "xl", md: 50 }}
-      >
-        {features}
-      </SimpleGrid>
+                View Resume
+              </Button>
+            </a>
+            <a href={resume} download>
+              <Button
+                variant="default"
+                radius="xl"
+                size="md"
+                className={classes.control}
+                rightSection={<IconDownload size={16} />}
+              >
+                Download Resume
+              </Button>
+            </a>
+          </Group>
+        </div>
+        <Image src={Herobg} className={classes.image} />
+      </div>
     </Container>
   );
 }
+export default Hero;
