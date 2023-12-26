@@ -17,6 +17,7 @@ import {
 import { IconHome, IconTimeline, IconLeaf } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 import { Timeline } from "./components/Timeline/Timeline";
+import { Garden } from "./components/Garden/Garden";
 
 function App() {
   const iconStyle = { width: rem(12), height: rem(12) };
@@ -90,7 +91,9 @@ function App() {
           <Timeline />
         </Tabs.Panel>
 
-        <Tabs.Panel value="Garden">Settings tab content</Tabs.Panel>
+        <Tabs.Panel value="Garden">
+          <Garden />
+        </Tabs.Panel>
       </Tabs>
     </MantineProvider>
   );
