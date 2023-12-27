@@ -7,7 +7,7 @@ import {
 } from "@tabler/icons-react";
 
 import classes from "./Timeline.module.css";
-import timedata from "../../assets/Data/timedata.json";
+
 export function Timeline() {
   return (
     <Time active={0} bulletSize={30} lineWidth={2} className={classes.time}>
