@@ -50,7 +50,10 @@ function Hero() {
               <b>Frontend Technologies</b> – HTML, CSS, Bootstrap, RestJS
             </List.Item>
             <List.Item>
-              <b>Backend Technologies</b> – SQL, MySQL, PostgreSQL
+              <b>Backend Technologies</b> – Node.js, Next.js
+            </List.Item>
+            <List.Item>
+              <b>Databases</b> – SQL, MySQL, PostgreSQL
             </List.Item>
             <List.Item>
               <b>Tools</b> – Microsoft Visual Studio, MS Server, Visual Studio

@@ -5,8 +5,9 @@ import {
   IconMessageDots,
   IconDeviceDesktopCode,
 } from "@tabler/icons-react";
-import classes from "./Timeline.module.css";
 
+import classes from "./Timeline.module.css";
+import timedata from "../../assets/Data/timedata.json";
 export function Timeline() {
   return (
     <Time active={0} bulletSize={30} lineWidth={2} className={classes.time}>
@@ -15,9 +16,9 @@ export function Timeline() {
         title="New branch"
       >
         <Text c="dimmed" size="sm">
-          You&apos;ve created new branch from master
+          You&apos;ve created new branch from master cd
         </Text>
-        <Text size="xs" mt={4}>
+        <Text size="xs" mt={4} pb={100}>
           2023
         </Text>
       </Time.Item>
@@ -28,7 +29,7 @@ export function Timeline() {
         <Text c="dimmed" size="sm">
           You&apos;ve created new branch from master
         </Text>
-        <Text size="xs" mt={4}>
+        <Text size="xs" mt={4} pb={100}>
           2023
         </Text>
       </Time.Item>
@@ -39,7 +40,7 @@ export function Timeline() {
         <Text c="dimmed" size="sm">
           You&apos;ve created new branch from master
         </Text>
-        <Text size="xs" mt={4}>
+        <Text size="xs" mt={4} pb={100}>
           2023
         </Text>
       </Time.Item>
