@@ -1,5 +1,4 @@
 import { Timeline as Time, Text, Avatar } from "@mantine/core";
-import { IconDeviceDesktopCode } from "@tabler/icons-react";
 
 import classes from "./Timeline.module.css";
 import timedata from "../../assets/Data/timedata.json";
@@ -11,8 +10,9 @@ interface TimeDataItem {
 }
 
 export function Timeline() {
-  const renderItem = (item: TimeDataItem) => (
+  const renderItem = (item: TimeDataItem, index: number) => (
     <Time.Item
+      key={index}
       bullet={<Avatar size={22} radius="xl" src={item["time-icon"]} />}
       title={item["time-title"]}
     >
@@ -26,7 +26,7 @@ export function Timeline() {
   );
 
   const mytimeline = timedata.map((item: TimeDataItem, index: number) =>
-    renderItem(item)
+    renderItem(item, index)
   );
   return (
     <Time active={0} bulletSize={30} lineWidth={2} className={classes.time}>
