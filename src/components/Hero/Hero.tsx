@@ -34,10 +34,11 @@ function Hero() {
             spacing="sm"
             size="sm"
             icon={
-              <ThemeIcon size={20} radius="xl">
+              <ThemeIcon size={20} variant="white" radius="xl">
                 <IconCheck
                   style={{ width: rem(12), height: rem(12) }}
-                  stroke={1.5}
+                  stroke={1.9}
+                  color="black"
                 />
               </ThemeIcon>
             }
