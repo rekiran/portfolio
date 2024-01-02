@@ -9,7 +9,7 @@ import {
   ThemeIcon,
   rem,
 } from "@mantine/core";
-import { IconCheck, IconCode, IconDownload } from "@tabler/icons-react";
+import { IconCheck, IconDownload } from "@tabler/icons-react";
 import Herobg from "../../assets/Herobg.png";
 import classes from "./Hero.module.css";
 import { IconFileAnalytics } from "@tabler/icons-react";
