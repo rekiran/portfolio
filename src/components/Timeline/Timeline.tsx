@@ -1,25 +1,44 @@
-import { Timeline as Time, Text, Avatar } from "@mantine/core";
+import { Timeline as Time, Text, UnstyledButton } from "@mantine/core";
 
 import classes from "./Timeline.module.css";
 import timedata from "../../assets/Data/timedata.json";
+import { IconDesk, IconDeviceLaptop } from "@tabler/icons-react";
+
 interface TimeDataItem {
   "time-title": string;
+  "time-sub": string;
   "time-desc": string;
   "time-date": string;
-  "time-icon": string;
+  link?: string;
 }
+const icons = [
+  <IconDeviceLaptop key={1} size={16} />,
+  <IconDeviceLaptop key={2} size={16} />,
+  <IconDesk key={3} size={16} />,
+  <IconDesk key={3} size={16} />,
+];
 
 export function Timeline() {
+  const openLinkInNewTab = (link: string) => {
+    window.open(link, "_blank");
+  };
   const renderItem = (item: TimeDataItem, index: number) => (
-    <Time.Item
-      key={index}
-      bullet={<Avatar size={22} radius="xl" src={item["time-icon"]} />}
-      title={item["time-title"]}
-    >
-      <Text c="dimmed" size="sm">
+    <Time.Item key={index} bullet={icons[index]} title={item["time-title"]}>
+      <UnstyledButton onClick={() => item.link && openLinkInNewTab(item.link)}>
+        <Text
+          c={"blue"}
+          fw={400}
+          fs="italic"
+          size="sm"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {item["time-sub"]}
+        </Text>
+      </UnstyledButton>
+      <Text c="dimmed" size="sm" style={{ whiteSpace: "pre-line" }}>
         {item["time-desc"]}
       </Text>
-      <Text size="xs" mt={4} pb={100}>
+      <Text size="xs" mt={4} pb={50}>
         {item["time-date"]}
       </Text>
     </Time.Item>
@@ -29,7 +48,13 @@ export function Timeline() {
     renderItem(item, index)
   );
   return (
-    <Time active={0} bulletSize={30} lineWidth={2} className={classes.time}>
+    <Time
+      active={0}
+      bulletSize={30}
+      lineWidth={2}
+      className={classes.time}
+      pr={500}
+    >
       {mytimeline}
     </Time>
   );
