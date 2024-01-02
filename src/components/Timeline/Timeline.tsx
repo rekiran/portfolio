@@ -48,13 +48,7 @@ export function Timeline() {
     renderItem(item, index)
   );
   return (
-    <Time
-      active={0}
-      bulletSize={30}
-      lineWidth={2}
-      className={classes.time}
-      pr={500}
-    >
+    <Time active={0} bulletSize={30} lineWidth={2} className={classes.time}>
       {mytimeline}
     </Time>
   );

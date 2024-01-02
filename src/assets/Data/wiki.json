@@ -1,12 +1,8 @@
 [
   {
-    "title": "How to use typescript",
-    "description": "description short explaination",
-    "date": "25 Dec, 2023"
-  },
-  {
-    "title": "How to use typescript",
-    "description": "description short explaination",
-    "date": "25 Dec, 2023"
+    "title": "How to design blog portfolio page using Mantine UI and TypeScript",
+    "description": "Craft a sleek and interactive blog portfolio using Mantine UI with TypeScript",
+    "date": "02 Jan, 2023",
+    "link": "https://medium.com/@kiran.one22/how-to-design-blog-portfolio-page-using-mantine-ui-and-typescript-f321eafa3e7b"
   }
 ]

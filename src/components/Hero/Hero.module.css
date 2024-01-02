@@ -37,6 +37,8 @@
   width: rem(350px);
   height: rem(350px);
   object-fit: contain;
+  border-radius: 10%;
+
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
   }

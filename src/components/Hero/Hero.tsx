@@ -27,7 +27,7 @@ function Hero() {
             experience.
           </Text>
           <Text mt={30}>
-            <IconCode size={16} color="black" /> <b>My Techstack</b>
+            <b>My Techstack</b>
           </Text>
           <List
             mt={30}
@@ -48,7 +48,7 @@ function Hero() {
               TypeScript
             </List.Item>
             <List.Item>
-              <b>Frontend Technologies</b> – HTML, CSS, Bootstrap, RestJS
+              <b>Frontend Technologies</b> – HTML, CSS, Bootstrap, ReactJS
             </List.Item>
             <List.Item>
               <b>Backend Technologies</b> – Node.js, Next.js
@@ -59,7 +59,7 @@ function Hero() {
             <List.Item>
               <b>Tools</b> – Microsoft Visual Studio, MS Server, Visual Studio
               Code, Eclipse, Github, JIRA, Bitbucket, PowerBI, Confluence,
-              ServiceNow
+              ServiceNow..
             </List.Item>
           </List>
 

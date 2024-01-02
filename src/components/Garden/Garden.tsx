@@ -4,28 +4,24 @@ import classes from "./Garden.module.css";
 import wiki from "../../assets/Data/wiki.json";
 
 export function Garden() {
-  const wikiBanner = wiki.map((item) => (
+  const wikiBanner = wiki.map((item, index: number) => (
     <Card
+      key={index}
       className={classes.card}
       shadow="sm"
       padding="lg"
       radius="md"
       withBorder
     >
-      <Group justify="space-between" mt="md" mb="xs">
-        <a
-          className={classes.a}
-          href="https://rekiran.github.io/"
-          target="_blank"
-        >
+      <a className={classes.a} href={item.link} target="_blank">
+        <Group justify="space-between" mt="md" mb="xs">
           <Text fw={500}>{item.title}</Text>
-        </a>
-        <Badge color="pink">{item.date}</Badge>
-      </Group>
-
-      <Text size="sm" c="dimmed">
-        {item.description}
-      </Text>
+          <Badge color="pink">{item.date}</Badge>
+        </Group>
+        <Text size="sm" c="dimmed">
+          {item.description}
+        </Text>
+      </a>
     </Card>
   ));
 
