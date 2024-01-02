@@ -27,7 +27,7 @@ export function Timeline() {
       <UnstyledButton onClick={() => item.link && openLinkInNewTab(item.link)}>
         <Text
           c={"blue"}
-          fw={400}
+          fw={350}
           fs="italic"
           size="sm"
           style={{ whiteSpace: "pre-line" }}
