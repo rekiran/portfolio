@@ -10,7 +10,7 @@ import {
   rem,
 } from "@mantine/core";
 import { IconCheck, IconDownload } from "@tabler/icons-react";
-import Herobg from "../../assets/Herobg.png";
+import Herobg from "../../assets/alaptop.png";
 import classes from "./Hero.module.css";
 import { IconFileAnalytics } from "@tabler/icons-react";
 import resume from "../../assets/KiranResume-2023.pdf";

@@ -9,6 +9,7 @@ import {
   ActionIcon,
   useComputedColorScheme,
   useMantineColorScheme,
+  Container,
 } from "@mantine/core";
 
 import {
@@ -17,13 +18,18 @@ import {
   IconLeaf,
   IconMoon,
   IconSun,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconLink,
+  IconBrandMedium,
 } from "@tabler/icons-react";
 
 import { Timeline } from "../Timeline/Timeline";
 import { Garden } from "../Garden/Garden";
 import cx from "clsx";
 function Layout() {
-  const iconStyle = { width: rem(12), height: rem(12) };
+  const iconStyle = { width: rem(15), height: rem(15) };
+  const footerIconStyle = { width: rem(25), height: rem(25) };
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
@@ -84,6 +90,37 @@ function Layout() {
           <Garden />
         </Tabs.Panel>
       </Tabs>
+
+      <Container size="fluid" className={classes.footer}>
+        <a href="https://github.com/rekiran" target="_blank">
+          <IconBrandGithub
+            style={footerIconStyle}
+            stroke={1.5}
+            color="black"
+          ></IconBrandGithub>
+        </a>
+        <a href="https://www.linkedin.com/in/kiran-one22/" target="_blank">
+          <IconBrandLinkedin
+            style={footerIconStyle}
+            stroke={1.5}
+            color="black"
+          ></IconBrandLinkedin>
+        </a>
+        <a href="https://rekiran.github.io/portfolio/" target="_blank">
+          <IconLink
+            style={footerIconStyle}
+            stroke={1.5}
+            color="black"
+          ></IconLink>
+        </a>
+        <a href="https://medium.com/@reKiran" target="_blank">
+          <IconBrandMedium
+            style={footerIconStyle}
+            stroke={1.5}
+            color="black"
+          ></IconBrandMedium>
+        </a>
+      </Container>
     </MantineProvider>
   );
 }
