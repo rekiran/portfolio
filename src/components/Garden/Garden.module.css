@@ -55,3 +55,6 @@
   margin-bottom: 20px;
   margin-left: 20px;
 }
+.projects {
+  display: flex;
+}
