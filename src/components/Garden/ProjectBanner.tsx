@@ -11,7 +11,7 @@ import {
 import { IconEye, IconExternalLink } from "@tabler/icons-react";
 import classes from "./ProjectBanner.module.css";
 import { useEffect, useState } from "react";
-
+import tictactoeImg from "../../assets/tictactoe.png";
 interface Project {
   title: string;
   description: string;
@@ -44,11 +44,16 @@ const ProjectBanner: React.FC<ProjectBannerProps> = ({ project }) => {
       setDaysDifference(null);
     }
   }, [project.date]);
-  console.log("Resolved Image Path:", project.image);
+
   return (
     <Card withBorder padding="lg" radius="md" className={classes.card} w={300}>
       <Card.Section mb="sm">
-        <Image src="/tictactoe.png" alt="Project Image" height={180} />
+        <Image
+          src={tictactoeImg}
+          alt="Project Image"
+          height={180}
+          fit="contain"
+        />
       </Card.Section>
 
       <Text fw={700} className={classes.title} mt="xs">

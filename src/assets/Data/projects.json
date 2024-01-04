@@ -1,16 +1,9 @@
 [
     {
         "title": "Tic Tac Toe game",
-        "description": "HTML, CSS, TypeScript, Material UI",
+        "description": "HTML",
         "preview": "https://rekiran.github.io/tic-tac-toe-game/",
         "sourceCode": "https://github.com/rekiran/tic-tac-toe-game",
-        "date": "2024-01-03",
-        "image": "tictactoe.png"
-    },
-    {
-        "title": "game",
-        "description": "HTML, CSS, TypeScript, Material UI",
-        "preview": "https://rekiran.github.io/tic-tac-toe-game/",
-        "sourceCode": "https://github.com/rekiran/tic-tac-toe-game"
+        "date": "2024-01-03"
     }
 ]
