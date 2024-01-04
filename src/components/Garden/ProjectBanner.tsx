@@ -18,6 +18,7 @@ interface Project {
   preview: string;
   sourceCode: string;
   date?: string;
+  image?: string;
 }
 
 interface ProjectBannerProps {
@@ -43,14 +44,11 @@ const ProjectBanner: React.FC<ProjectBannerProps> = ({ project }) => {
       setDaysDifference(null);
     }
   }, [project.date]);
+  console.log("Resolved Image Path:", project.image);
   return (
     <Card withBorder padding="lg" radius="md" className={classes.card} w={300}>
       <Card.Section mb="sm">
-        <Image
-          src="https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
-          alt="Top 50 underrated plants for house decoration"
-          height={180}
-        />
+        <Image src="/tictactoe.png" alt="Project Image" height={180} />
       </Card.Section>
 
       <Text fw={700} className={classes.title} mt="xs">
