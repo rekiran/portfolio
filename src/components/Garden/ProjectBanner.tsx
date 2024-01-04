@@ -50,7 +50,7 @@ const ProjectBanner: React.FC<ProjectBannerProps> = ({ project }) => {
       <Card.Section mb="sm">
         <Image
           src={tictactoeImg}
-          alt="Project Image"
+          alt="Project image"
           height={180}
           fit="contain"
         />
