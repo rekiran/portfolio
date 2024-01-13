@@ -8,19 +8,58 @@ import {
   List,
   ThemeIcon,
   rem,
+  ActionIcon,
 } from "@mantine/core";
-import { IconCheck, IconDownload } from "@tabler/icons-react";
+import { IconCheck, IconDownload, IconQuestionMark } from "@tabler/icons-react";
 import Herobg from "../../assets/alaptop.png";
 import classes from "./Hero.module.css";
 import { IconFileAnalytics } from "@tabler/icons-react";
 import resume from "../../assets/Resume Kiran 2024.pdf";
+import { useHover } from "@mantine/hooks";
+
 function Hero() {
+  const { hovered, ref } = useHover();
+
   return (
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            Hi, I'm <span className={classes.highlight}>Kiran</span> <br />
+            Hi, I'm <span className={classes.highlight}>Kiran </span>
+            <span ref={ref}>
+              {hovered ? (
+                <div
+                  style={{
+                    display: "flex",
+                    color: "black",
+                    paddingTop: 15,
+                    paddingLeft: "5px",
+                  }}
+                >
+                  <Text>
+                    I don't have one
+                    <ActionIcon
+                      variant="transparent"
+                      aria-label="Settings"
+                    ></ActionIcon>
+                  </Text>
+                </div>
+              ) : (
+                <div style={{ display: "flex", color: "black", padding: 15 }}>
+                  <Text>
+                    {" "}
+                    Last name
+                    <ActionIcon variant="transparent" aria-label="Settings">
+                      <IconQuestionMark
+                        style={{ width: "70%", height: "70%" }}
+                        stroke={1.5}
+                      />
+                    </ActionIcon>
+                  </Text>
+                </div>
+              )}{" "}
+            </span>
+            <br />
           </Title>
           <Text c="dimmed" mt="md">
             I am a detail-focused developer with 3 yrs of professional
