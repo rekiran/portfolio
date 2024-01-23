@@ -34,20 +34,18 @@
   }
 }
 
-.image {
-  width: rem(350px);
-  height: rem(350px);
-  object-fit: contain;
-  border-radius: 10%;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
-}
-
 .highlight {
   position: relative;
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
   padding: rem(4px) rem(12px);
+}
+.image {
+  width: rem(350px);
+  height: rem(350px);
+  object-fit: contain;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
 }

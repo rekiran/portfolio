@@ -1,0 +1,66 @@
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 10px;
+  background-color: "ffffff";
+}
+.navlinks {
+  margin-left: auto;
+}
+/* container with boxes inside */
+.container {
+  width: 100% !important;
+  background-color: "ffffff";
+  display: flex;
+  flex-direction: column;
+}
+.box1 {
+  padding: 100px 20px 100px 100px;
+  width: 100% !important;
+  display: flex;
+}
+.box1 h1 {
+  padding: 100px 0 0 0;
+  font-size: 30px;
+  line-height: 0%;
+  font-family: "Raleway Variable";
+  font-weight: 600;
+}
+.box1 .text {
+  font-family: "Montserrat Variable";
+  font-weight: 400;
+  font-size: 16px;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+  color: #00000099;
+}
+
+.box2 {
+  padding: 200px 20px 100px 20px;
+  width: 100% !important;
+  display: flex;
+}
+.box2 .text {
+  font-family: "Montserrat Variable";
+  font-weight: 400;
+  font-size: 16px;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+  color: #00000099;
+}
+.box3 {
+  padding: 200px 20px 100px 20px;
+  width: 100% !important;
+  display: flex;
+}
+.box3 .text {
+  font-family: "Montserrat Variable";
+  font-weight: 400;
+  font-size: 16px;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+  color: #00000099;
+}

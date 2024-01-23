@@ -22,11 +22,13 @@ import {
   IconBrandLinkedin,
   IconLink,
   IconBrandMedium,
+  IconTree,
 } from "@tabler/icons-react";
-
 import { Timeline } from "../Timeline/Timeline";
 import { Garden } from "../Garden/Garden";
 import cx from "clsx";
+import CodeEditor from "../Material/CodeEditor";
+
 function Layout() {
   const iconStyle = { width: rem(15), height: rem(15) };
   const footerIconStyle = { width: rem(25), height: rem(25) };
@@ -54,6 +56,12 @@ function Layout() {
               leftSection={<IconLeaf style={iconStyle} />}
             >
               Garden
+            </Tabs.Tab>
+            <Tabs.Tab
+              value="Apple"
+              leftSection={<IconTree style={iconStyle} />}
+            >
+              Apple Tree
             </Tabs.Tab>
             <ActionIcon
               onClick={() =>
@@ -89,31 +97,50 @@ function Layout() {
         <Tabs.Panel value="Garden">
           <Garden />
         </Tabs.Panel>
+        <Tabs.Panel value="Apple">
+          <CodeEditor />
+        </Tabs.Panel>
       </Tabs>
 
       <Container size="fluid" className={classes.footer}>
-        <a href="https://github.com/rekiran" target="_blank">
+        <a
+          className={classes.a}
+          href="https://github.com/rekiran"
+          target="_blank"
+        >
           <IconBrandGithub
             style={footerIconStyle}
             stroke={1.5}
             color="black"
           ></IconBrandGithub>
         </a>
-        <a href="https://www.linkedin.com/in/kiran-one22/" target="_blank">
+        <a
+          className={classes.a}
+          href="https://www.linkedin.com/in/kiran-one22/"
+          target="_blank"
+        >
           <IconBrandLinkedin
             style={footerIconStyle}
             stroke={1.5}
             color="black"
           ></IconBrandLinkedin>
         </a>
-        <a href="https://rekiran.github.io/portfolio/" target="_blank">
+        <a
+          className={classes.a}
+          href="https://rekiran.github.io/portfolio/"
+          target="_blank"
+        >
           <IconLink
             style={footerIconStyle}
             stroke={1.5}
             color="black"
           ></IconLink>
         </a>
-        <a href="https://medium.com/@reKiran" target="_blank">
+        <a
+          className={classes.a}
+          href="https://medium.com/@reKiran"
+          target="_blank"
+        >
           <IconBrandMedium
             style={footerIconStyle}
             stroke={1.5}

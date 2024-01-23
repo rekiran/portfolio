@@ -127,7 +127,11 @@ function Hero() {
             </a>
           </Group>
         </div>
-        <Image src={Herobg} className={classes.image} />
+
+        {/*Image */}
+        <div className={classes.imageContainer}>
+          <Image src={Herobg} className={classes.image} />
+        </div>
       </div>
     </Container>
   );

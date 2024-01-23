@@ -1,0 +1,42 @@
+.st10,
+.st5,
+.st6,
+.st7,
+.st8,
+.st9 {
+  fill: none;
+  stroke: #c586c0;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.st10,
+.st6,
+.st7,
+.st8,
+.st9 {
+  stroke: #9cdcfe;
+}
+
+.st10,
+.st7,
+.st8,
+.st9 {
+  stroke: #ce9178;
+}
+
+.st10,
+.st8,
+.st9 {
+  stroke: #569cd6;
+}
+
+.st10,
+.st9 {
+  stroke: #fff;
+}
+
+.st10 {
+  stroke: #dcdcaa;
+}

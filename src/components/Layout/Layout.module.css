@@ -31,3 +31,10 @@
   display: flex;
   gap: rem(10);
 }
+.a {
+  transition: transform 0.5s ease;
+}
+
+.a:hover {
+  transform: scale(1.5);
+}
