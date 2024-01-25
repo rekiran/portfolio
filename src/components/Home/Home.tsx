@@ -4,6 +4,7 @@ import logo from "../../assets/logoKiran.svg";
 import classes from "./Home.module.css";
 
 import Slides from "./Slides";
+import { Timeline } from "../Timeline/Timeline";
 function Home() {
   // Create refs for the target elements
   const targetRef1 = useRef<HTMLDivElement>(null);
@@ -22,16 +23,18 @@ function Home() {
       <nav className={classes.nav}>
         <Image src={logo} h={100} w={200} pl={"70px"} fit="contain" />
         <Group className={classes.navlinks} justify="center" pr={40} pl={10}>
+          {/* Buttons at the top */}
           <Button
-            variant="white"
-            size="lg"
+            className={classes.h1}
+            size="md"
             bg={"none"}
             onClick={() => scrollToTarget(targetRef1)}
           >
             Home
           </Button>
           <Button
-            size="lg"
+            className={classes.h1}
+            size="md"
             variant="white"
             bg={"none"}
             onClick={() => scrollToTarget(targetRef2)}
@@ -39,7 +42,8 @@ function Home() {
             Timeline
           </Button>
           <Button
-            size="lg"
+            className={classes.h1}
+            size="md"
             variant="white"
             bg={"none"}
             onClick={() => scrollToTarget(targetRef3)}
@@ -48,7 +52,7 @@ function Home() {
           </Button>
         </Group>
       </nav>
-      {/* Buttons at the top */}
+
       <div className={classes.container}>
         {/* Box 1 */}
         <Box className={classes.box1} ref={targetRef1}>
@@ -75,9 +79,7 @@ function Home() {
         {/* Box 2 */}
         <Box className={classes.box2} ref={targetRef2}>
           <Text className={classes.text}>
-            Paper is the most basic ui component Use it to create cards,
-            dropdowns, modals and other components that require background with
-            shadow
+            <Timeline />
           </Text>
         </Box>
         {/* Box 3 */}

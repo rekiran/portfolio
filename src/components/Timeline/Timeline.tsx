@@ -26,7 +26,8 @@ export function Timeline() {
     <Time.Item key={index} bullet={icons[index]} title={item["time-title"]}>
       <UnstyledButton onClick={() => item.link && openLinkInNewTab(item.link)}>
         <Text
-          c={"blue"}
+          className={classes.compName}
+          c={"#202a34"}
           fw={350}
           fs="italic"
           size="sm"
@@ -35,10 +36,15 @@ export function Timeline() {
           {item["time-sub"]}
         </Text>
       </UnstyledButton>
-      <Text c="dimmed" size="sm" style={{ whiteSpace: "pre-line" }}>
+      <Text
+        className={classes.jobDesc}
+        c="dimmed"
+        size="sm"
+        style={{ whiteSpace: "pre-line" }}
+      >
         {item["time-desc"]}
       </Text>
-      <Text size="xs" mt={4} pb={50}>
+      <Text className={classes.jobDate} size="xs" mt={4} pb={50}>
         {item["time-date"]}
       </Text>
     </Time.Item>
